@@ -1,0 +1,37 @@
+@use "sass:math"
+@import ./_breackpoints
+section.row
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  padding: 16px
+section.row.center
+  justify-content: center
+@for $i from 1 through 12
+  $col: math.div(100%, 12) * $i
+  .col-#{$i}
+    -ms-flex: 0 0 $col
+    flex: 0 0 $col
+    max-width: $col
+    padding: 16px
+$grid-breakpoints: (xs: 0px, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px)
+@each $size, $breackpoint in $grid-breakpoints
+  @include breakpoint($breackpoint)
+    @for $i from 1 through 12
+      $col: math.div(100%, 12) * $i
+      .col-#{$size}-#{$i}
+        -ms-flex: 0 0 $col
+        flex: 0 0 $col
+        max-width: $col
+        padding: 16px
+@for $i from 1 through 12
+  $col: math.div(100%, 12) * $i
+  .offset-#{$i}
+    margin-left: $col
+@each $size, $breackpoint in $grid-breakpoints
+  @include breakpoint($breackpoint)
+    @for $i from 1 through 12
+      $col: math.div(100%, 12) * $i
+      .offset-#{$size}-#{$i}
+        margin-left: $col

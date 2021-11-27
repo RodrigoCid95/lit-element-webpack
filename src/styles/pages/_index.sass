@@ -1,0 +1,14 @@
+@import ./../_general
+@import ./../_breackpoints
+@import ./../_grid
+@include breakpoint($xs)
+  .order-0
+    order: 1
+  .order-1
+    order: 0
+  
+@include breakpoint($sm)
+  .order-0
+    order: 0
+  .order-1
+    order: 1

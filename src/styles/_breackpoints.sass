@@ -1,0 +1,15 @@
+$xs: 0px
+$sm: 576px
+$md: 768px
+$lg: 992px
+$xl: 1200px
+$xxl: 1400px
+@mixin breakpoint($breackpoint)
+  @media screen and (min-width: $breackpoint)
+    @content
+@mixin allBreacks($prefix)
+  $breakpoints: (xxl: 1400px, xl: 1200px, lg: 992px, md: 768px, sm: 576px, xs: 0px)
+  @each $size, $breackpoint in $breakpoints
+    @include breakpoint($breackpoint)
+      .#{$prefix}-#{$size}
+        @content
