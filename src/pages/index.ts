@@ -1,13 +1,13 @@
 import { LitElement, html } from 'lit'
 import { customElement } from 'lit/decorators.js'
 import { Events } from './../events'
-import './../components/page'
-import './../components/header'
-import './../components/menu'
-import './../components/content'
-import './../components/dropdown'
-import './../components/footer'
-import _index from './../styles/pages/_index.sass'
+import '../components/page'
+import '../sections/header'
+import '../components/menu'
+import '../sections/content'
+import '../components/dropdown'
+import '../sections/footer'
+import _index from './../../styles/pages/_index.sass'
 
 @customElement('page-index')
 export default class PageIndex extends LitElement {
@@ -29,7 +29,7 @@ export default class PageIndex extends LitElement {
         <app-content>
           <section class="row center">
             <div class="order-0 col-10 offset-1">
-              <app-dropwown value="Values" @onChange=${(e: any) => console.log(e.detail.value)}>
+              <app-dropwown value="Select one..." @onChange=${(e: any) => console.log(e.detail.value)}>
                 <app-dropdown-option value="value1">Value 1</app-dropdown-option>
                 <app-dropdown-option value="value2">Value 2</app-dropdown-option>
               </app-dropwown>

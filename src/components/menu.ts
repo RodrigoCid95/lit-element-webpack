@@ -1,11 +1,11 @@
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import { Events } from './../../events'
-import _styles from './_styles.sass'
+import { Events } from '../events'
+import _menu from './../../styles/components/_menu.sass'
 
 @customElement('app-menu')
 export default class AppMenu extends LitElement {
-  static styles = _styles
+  static styles = _menu
   @property({ type: Array }) items: Item[] = []
   @property({ type: String }) title: string = ''
   @property({ type: Boolean }) backButton: boolean = false

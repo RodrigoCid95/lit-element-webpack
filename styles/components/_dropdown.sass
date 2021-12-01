@@ -1,4 +1,6 @@
 .options
+  -webkit-user-select: none
+  -ms-user-select: none
   user-select: none
   display: none
   position: absolute
@@ -10,6 +12,7 @@
 .content
   border-style: groove
   padding: 0.2rem
+  width: -moz-fit-content
   width: fit-content
 .content, .content label
   cursor: pointer
@@ -23,15 +26,17 @@
   display: inline-block
   padding: 3px
   margin: 0px 3px 3px 1rem
-  transform: rotate(45deg)
+  -ms-transform: rotate(45deg)
   -webkit-transform: rotate(45deg)
+  transform: rotate(45deg)
   transition: all 0.5s ease 0s
 .content.expand .options
   display: block
 .content.expand:after
   margin: 0px 3px 0px 1rem
-  transform: rotate(-135deg)
+  -ms-transform: rotate(-135deg)
   -webkit-transform: rotate(-135deg)
+  transform: rotate(-135deg)
 @keyframes expand
   0%
     opacity: 0

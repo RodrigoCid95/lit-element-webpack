@@ -2,11 +2,11 @@ import { LitElement, html } from 'lit'
 import { customElement } from 'lit/decorators.js'
 import { Events } from '../events'
 import '../components/page'
-import '../components/header'
+import '../sections/header'
 import '../components/menu'
-import './../components/content'
-import './../components/footer'
-import _general from './../styles/_general.sass'
+import '../sections/content'
+import '../sections/footer'
+import _general from './../../styles/_general.sass'
 
 @customElement('page-2')
 export default class Page2 extends LitElement {

@@ -1,10 +1,10 @@
 import { LitElement, html } from 'lit'
 import { customElement } from 'lit/decorators.js'
-import _styles from './_styles.sass'
+import _footer from './../../styles/sections/_footer.sass'
 
 @customElement('app-footer')
 export default class AppFooter extends LitElement {
-  static styles = _styles
+  static styles = _footer
   render() {
     return html`
       <footer class="footer">

@@ -2,12 +2,12 @@ import { LitElement, html } from 'lit'
 import { customElement } from 'lit/decorators.js'
 import { Events } from '../events'
 import '../components/page'
-import '../components/header'
+import '../sections/header'
 import '../components/menu'
-import './../components/content'
-import './../components/img'
-import './../components/footer'
-import _page1 from './../styles/pages/_page1.sass'
+import '../sections/content'
+import '../components/img'
+import '../sections/footer'
+import _page1 from './../../styles/pages/_page1.sass'
 
 @customElement('page-1')
 export default class Page1 extends LitElement {

@@ -1,12 +1,12 @@
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { classMap } from 'lit/directives/class-map.js'
-import { Events } from './../../events'
-import _styles from './_styles.sass'
+import { Events } from '../events'
+import _img from './../../styles/components/_img.sass'
 
 @customElement('app-img')
 export class AppImg extends LitElement {
-  static styles = _styles
+  static styles = _img
   private loading = true
   private currentSrc: string = ''
   private tempImgs: { [x: string]: HTMLImageElement } = {}
@@ -18,7 +18,6 @@ export class AppImg extends LitElement {
   private handlerResize = ({ size }: any) => this.setImage(size)
   connectedCallback() {
     super.connectedCallback()
-    this.style
     Events.addEventListener('resize', this.handlerResize)
     this.setImage()
   }

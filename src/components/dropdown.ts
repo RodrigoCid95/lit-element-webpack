@@ -1,10 +1,10 @@
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import _styles from './_styles.sass'
+import _dropdown from './../../styles/components/_dropdown.sass'
 
 @customElement('app-dropwown')
 export class AppDropdown extends LitElement {
-  static styles = _styles
+  static styles = _dropdown
   @property({ type: String }) value: string = ''
   connectedCallback() {
     super.connectedCallback()
@@ -25,7 +25,7 @@ export class AppDropdown extends LitElement {
 }
 @customElement('app-dropdown-option')
 export class AppDropdownOption extends LitElement {
-  static styles = _styles
+  static styles = _dropdown
   @property({ type: String }) value: string = ''
   @property({ type: Boolean }) selected: boolean = false;
   connectedCallback() {

@@ -1,10 +1,10 @@
 import { LitElement, html } from 'lit'
 import { customElement } from 'lit/decorators.js'
-import _styles from './_styles.sass'
+import _loading from './../../styles/components/_loading.sass'
 
 @customElement('app-loading')
 export default class AppLoading extends LitElement {
-  static styles = _styles
+  static styles = _loading
   render() {
     return html`
       <div class="loader-container">
